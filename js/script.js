@@ -407,3 +407,31 @@ skipLinkStyle.textContent = `
     }
 `;
 document.head.appendChild(skipLinkStyle);
+
+// About page section and card animation
+// Only runs if .why-card exists (i.e., on about.html)
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('.why-card')) {
+        // Animate sections
+        document.querySelectorAll('.animate-section').forEach(function(section, i) {
+            setTimeout(function() {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            }, 200 + i * 200);
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(40px)';
+            section.style.transition = 'opacity 1s cubic-bezier(.77,0,.18,1), transform 1s cubic-bezier(.77,0,.18,1)';
+        });
+        // Animate why-cards
+        var cards = document.querySelectorAll('.why-card');
+        cards.forEach(function(card, i) {
+            setTimeout(function() {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 600 + i * 200);
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(40px)';
+            card.style.transition = 'opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1)';
+        });
+    }
+});
