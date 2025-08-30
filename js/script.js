@@ -4,6 +4,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Phone number popup logic
+    var callLink = document.getElementById('call-phone-link');
+    var popup = document.getElementById('phone-popup');
+    var closeBtn = document.getElementById('close-phone-popup');
+    if (callLink && popup && closeBtn) {
+        callLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            popup.style.display = 'flex';
+        });
+        closeBtn.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+        // Close popup when clicking outside the box
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    }
+
     // Toggle mobile menu
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');

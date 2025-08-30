@@ -291,16 +291,19 @@ p {
 
 .stat-number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #B6862C;
+    line-height: 1.1;
 }
 
 .stat-label {
     color: #4A4A4A;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 0.5rem;
 }
 
 /* Categories Section */
@@ -403,11 +406,20 @@ p {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    /* Remove zoom effect on hover */
+    transition: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.gallery-item:hover {
-    transform: scale(1.05);
+/* Increase image size inside gallery-item */
+.gallery-item img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 .gallery-placeholder {
@@ -554,11 +566,32 @@ p {
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
-
+/* Brand colors for social icons on hover - full circle */
 .social-links a:hover {
-    background: #B6862C;
+    background: #1877F3;
+}
+.social-links a:hover .fa-facebook {
+    color: #fff;
+}
+.social-links a[href*="instagram"]:hover {
+    background: #E4405F;
+}
+.social-links a[href*="instagram"]:hover .fa-instagram {
+    color: #fff;
+}
+.social-links a[href*="wa.me"]:hover {
+    background: #25D366;
+}
+.social-links a[href*="wa.me"]:hover .fa-whatsapp {
+    color: #fff;
+}
+.social-links a[href*="houzz"]:hover {
+    background: #4DBC15;
+}
+.social-links a[href*="houzz"]:hover .fa-houzz {
+    color: #fff;
 }
 
 .footer-bottom {
