@@ -576,7 +576,7 @@ p {
     color: #fff;
 }
 .social-links a[href*="instagram"]:hover {
-    background: #E4405F;
+    background: linear-gradient(135deg, #e4405f 0%, #8a3ab9 100%);
 }
 .social-links a[href*="instagram"]:hover .fa-instagram {
     color: #fff;
