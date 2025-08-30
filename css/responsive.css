@@ -152,12 +152,18 @@
     
     .hero-title {
         font-size: 2rem;
+            margin-bottom: 1.2rem;
     }
     
     .hero-tagline {
         font-size: 1.1rem;
+            margin-bottom: 2rem;
     }
     
+        .hero-buttons {
+            margin-top: 1.2rem;
+            gap: 1.2rem;
+        }
     .hero-image {
         padding: 1rem;
     }
@@ -234,6 +240,14 @@
     .gallery-item {
         margin: 0 1rem;
     }
+        /* Fix gallery images so they are not zoomed/cropped on mobile */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     
     .cta {
         padding: 2rem 0;
@@ -350,5 +364,5 @@
     .gallery-item {
         box-shadow: none;
         border: 1px solid #ddd;
+    } 
     }
-}
