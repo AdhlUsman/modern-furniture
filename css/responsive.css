@@ -10,17 +10,28 @@
         font-size: 3rem;
     }
     
-    .category-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .category-card {
+        padding: 1rem;
+        margin: 0 0.5rem 1rem 0.5rem;
+        border-radius: 10px;
     }
-    
-    .intro-stats {
-        gap: 2rem;
+    .category-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #B6862C 0%, #D4AF37 100%);
     }
-}
-
-/* Tablet Portrait */
-@media (max-width: 768px) {
+    .category-img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        display: block;
+    }
     .navbar {
         padding: 0.5rem 0;
     }
