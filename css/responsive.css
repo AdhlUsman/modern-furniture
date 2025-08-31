@@ -1,3 +1,6 @@
+    .nav-toggle {
+        display: none !important;
+    }
 /* Additional Responsive Styles */
 
 /* Tablet Landscape */
@@ -12,23 +15,19 @@
     
     .category-card {
         padding: 1rem;
-        margin: 0 0.5rem 1rem 0.5rem;
         border-radius: 10px;
+        margin: 0 0.5rem 1rem 0.5rem;
     }
     .category-icon {
         width: 70px;
         height: 70px;
         border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #B6862C 0%, #D4AF37 100%);
     }
     .category-img {
         width: 70px;
         height: 70px;
-        object-fit: cover;
         border-radius: 8px;
+        object-fit: cover;
         box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         display: block;
     }
@@ -251,14 +250,12 @@
     .gallery-item {
         margin: 0 1rem;
     }
-        /* Fix gallery images so they are not zoomed/cropped on mobile */
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     
     .cta {
         padding: 2rem 0;
@@ -376,4 +373,5 @@
         box-shadow: none;
         border: 1px solid #ddd;
     } 
+        }
     }
