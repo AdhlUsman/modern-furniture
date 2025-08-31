@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Modern Furniture</title>
+    <link rel="icon" type="image/png" href="images/Modern-furniture-logo.png">
+    <meta name="description" content="Portfolio showcase of modern furniture in real homes and offices. High-quality photos, before/after setups, and project highlights.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/Modern-furniture-logo.png" alt="Modern Furniture Logo" />
+                <h2>Modern Furniture</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="collections.html" class="nav-link">Collections</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="gallery-preview animate-section">
+            <h2>Gallery / Projects</h2>
+            <p>Explore our portfolio of modern furniture in real homes and offices. See before/after transformations and project highlights.</p>
+            <div class="gallery-grid">
+                <!-- Example Gallery Items -->
+                <div class="gallery-item animate-in">
+                    <img src="images/gallery1.jpg" alt="Living Room Transformation" />
+                    <div class="gallery-caption">
+                        <h4>Living Room Makeover</h4>
+                        <p>Before/After: Modern sofa, coffee table, and accent chairs.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-in">
+                    <img src="images/gallery2.jpg" alt="Office Setup" />
+                    <div class="gallery-caption">
+                        <h4>Office Workspace</h4>
+                        <p>Ergonomic desk and chair for productivity.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-in">
+                    <img src="images/gallery3.jpg" alt="Bedroom Project" />
+                    <div class="gallery-caption">
+                        <h4>Bedroom Retreat</h4>
+                        <p>Premium bed and wardrobe installation.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-in">
+                    <img src="images/gallery4.jpg" alt="Outdoor Patio" />
+                    <div class="gallery-caption">
+                        <h4>Outdoor Patio</h4>
+                        <p>Stylish patio set for garden relaxation.</p>
+                    </div>
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+            <!-- Optional: Slider for before/after setups -->
+            <div class="before-after-slider animate-section">
+                <h3>Before / After Transformation</h3>
+                <div class="slider-wrapper">
+                    <div class="slider-image">
+                        <img src="images/before.jpg" alt="Before Setup" />
+                        <span class="slider-label">Before</span>
+                    </div>
+                    <div class="slider-image">
+                        <img src="images/after.jpg" alt="After Setup" />
+                        <span class="slider-label">After</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <img src="images/Modern-furniture-logo.png" alt="Modern Furniture Logo" style="height:32px; width:auto;">
+                        <h3 style="margin:0;">Modern Furniture</h3>
+                    </div>
+                    <p>Creating beautiful spaces with contemporary furniture designs.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/modern.furniture1988/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/modern_furniture1988?igsh=MXZ3anl0dnMxN2hkaw==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919847104232?text=" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a href="#" id="call-phone-link">Call Us</a>
+                    </p>
+                    <div id="phone-popup" style="display:none; position:fixed; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:9999; align-items:center; justify-content:center;">
+                        <div style="background:#fff; padding:2rem; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.15); text-align:center; min-width:250px;">
+                            <h4 style="margin-bottom:1rem; color:#B6862C;">Choose a number to call</h4>
+                            <a href="tel:+919072722510" class="btn btn-primary" style="margin-bottom:1rem; display:block;">90 7272 2510</a>
+                            <a href="tel:+919847104232" class="btn btn-primary" style="margin-bottom:1rem; display:block;">9847 10 4232</a>
+                            <button id="close-phone-popup" class="btn btn-secondary" style="margin-top:0.5rem;">Cancel</button>
+                        </div>
+                    </div>
+                    <p>
+                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCGDWbgSbCJbRQctmGRmLHHHJshPkkslkMDCtscltghsDPhGLzgRDJxLKLdWXFLMpJVBcg" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-envelope"></i> modernkottakkal@gmail.com
+                        </a>
+                    </p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Modern+Furniture/@11.0002925,75.9935947,855m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3ba7b5257c016c5f:0xf6eae47b167cffa9!8m2!3d11.0002925!4d75.9961696!16s%2Fg%2F11bx5plm7v?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Opp. Neha Hospital Main Road -<strong>KOTTAKKAL</strong>Malappuram Dt., Kerala- 676 503</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Modern Furniture  All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

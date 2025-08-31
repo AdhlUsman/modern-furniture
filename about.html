@@ -38,7 +38,7 @@
         <section class="intro animate-section" style="background:#F5F2EC; padding:3rem 0;">
             <div class="intro-content">
                 <h1>Our Brand Story</h1>
-                <p>Modern Furniture Co. was founded in 1988 with a vision to transform living spaces through contemporary design and quality craftsmanship. Over the decades, we've grown from a small workshop into a leading name in premium furniture, trusted by thousands of happy customers.</p>
+                <p>Modern Furniture was founded in 1988 with a vision to transform living spaces through contemporary design and quality craftsmanship. Over the decades, we've grown from a small workshop into a leading name in premium furniture, trusted by thousands of happy customers.</p>
                 <p>Our passion for design is matched only by our commitment to sustainability and innovation. Every piece we create is a blend of timeless style and modern functionality, crafted to elevate your home and your lifestyle.</p>
             </div>
         </section>
@@ -80,7 +80,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Modern Furniture</h3>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <img src="images/Modern-furniture-logo.png" alt="Modern Furniture Logo" style="height:32px; width:auto;">
+                        <h3 style="margin:0;">Modern Furniture</h3>
+                    </div>
                     <p>Creating beautiful spaces with contemporary furniture designs.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/modern.furniture1988/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
@@ -90,12 +93,18 @@
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="collections.html">Collections</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a href="#" id="call-phone-link">Call Us</a>
+                    </p>
+                    <div id="phone-popup" style="display:none; position:fixed; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:9999; align-items:center; justify-content:center;">
+                        <div style="background:#fff; padding:2rem; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.15); text-align:center; min-width:250px;">
+                            <h4 style="margin-bottom:1rem; color:#B6862C;">Choose a number to call</h4>
+                            <a href="tel:+919072722510" class="btn btn-primary" style="margin-bottom:1rem; display:block;">90 7272 2510</a>
+                            <a href="tel:+919847104232" class="btn btn-primary" style="margin-bottom:1rem; display:block;">9847 10 4232</a>
+                            <button id="close-phone-popup" class="btn btn-secondary" style="margin-top:0.5rem;">Cancel</button>
+                        </div>
+                    </div>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -121,7 +130,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Modern Furniture Co. All rights reserved.</p>
+                <p>&copy; 2025 Modern Furniture All rights reserved.</p>
             </div>
         </div>
     </footer>
