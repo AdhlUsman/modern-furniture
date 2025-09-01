@@ -7,6 +7,116 @@
         max-width: 100%;
         overflow-x: hidden;
     }
+    
+    /* Contact page mobile styles */
+    .contact-section {
+        padding: 4rem 0 2rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 10px;
+    }
+    
+    .contact-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .info-card {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+    
+    .info-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .info-item {
+        margin-bottom: 1.2rem;
+    }
+    
+    .info-item i {
+        font-size: 1.3rem;
+        width: 20px;
+    }
+    
+    .info-item h4 {
+        font-size: 1rem;
+    }
+    
+    .info-item p {
+        font-size: 0.9rem;
+    }
+    
+    .social-links-contact {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+    
+    .social-icons {
+        gap: 0.8rem;
+    }
+    
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    /* Location section mobile styles */
+    .location-section {
+        padding: 2rem 0;
+    }
+    
+    .location-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .location-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 10px;
+    }
+    
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 10px;
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+    
+    .address-card {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .address-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .address-card p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .address-card .btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
     .navbar {
         position: fixed;
         width: 100%;
@@ -340,6 +450,42 @@
     .container {
         padding: 0 30px;
     }
+    
+    /* Contact page tablet styles */
+    .contact-section {
+        padding: 5rem 0 3rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .contact-container {
+        max-width: 500px;
+    }
+    
+    .info-card {
+        padding: 2rem;
+    }
+    
+    .info-card h3 {
+        font-size: 1.6rem;
+    }
+    
+    /* Location section tablet styles */
+    .location-section {
+        padding: 3rem 0;
+    }
+    
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .map-container iframe {
+        height: 350px;
+    }
+    
     .nav-container {
         padding: 15px 30px;
     }
@@ -385,6 +531,41 @@
 
 /* Desktop styles (1024px and up) */
 @media (min-width: 1024px) {
+    /* Contact page desktop styles */
+    .contact-section {
+        padding: 7rem 0 4rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-container {
+        max-width: 600px;
+    }
+    
+    .info-card {
+        padding: 2.5rem;
+    }
+    
+    .info-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    /* Location section desktop styles */
+    .location-section {
+        padding: 4rem 0;
+    }
+    
+    .location-grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+    
+    .map-container iframe {
+        height: 450px;
+    }
+    
     .hamburger, .nav-toggle {
         display: none !important;
     }
@@ -440,6 +621,106 @@
 
 /* Extra small devices (up to 480px) */
 @media (max-width: 480px) {
+    /* Contact page extra small styles */
+    .contact-section {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-intro {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        padding: 0 5px;
+    }
+    
+    .contact-container {
+        padding: 0 5px;
+    }
+    
+    .info-card {
+        padding: 1.2rem;
+        margin: 0 5px;
+    }
+    
+    .info-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .info-item {
+        margin-bottom: 1rem;
+    }
+    
+    .info-item i {
+        font-size: 1.1rem;
+        width: 18px;
+    }
+    
+    .info-item h4 {
+        font-size: 0.9rem;
+    }
+    
+    .info-item p {
+        font-size: 0.8rem;
+    }
+    
+    .social-links-contact {
+        margin-top: 1.2rem;
+        padding-top: 0.8rem;
+    }
+    
+    .social-icons {
+        gap: 0.6rem;
+    }
+    
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    
+    /* Location section extra small styles */
+    .location-section {
+        padding: 1.5rem 0;
+    }
+    
+    .location-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .location-intro {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        padding: 0 5px;
+    }
+    
+    .location-grid {
+        padding: 0 5px;
+    }
+    
+    .map-container iframe {
+        height: 250px;
+    }
+    
+    .address-card {
+        padding: 1.2rem;
+    }
+    
+    .address-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .address-card p {
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+    
     .nav-logo h2 {
         font-size: 14px;
     }
