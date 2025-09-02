@@ -15,7 +15,7 @@
     
     /* Contact page mobile styles */
     .contact-section {
-        padding: 4rem 0 2rem;
+        padding: 5rem 0 2rem;
     }
     
     .contact-section h2 {
@@ -218,12 +218,16 @@
         transform: translateY(-7px) rotate(-45deg);
     }
     main {
-        padding-top: 100px;
+        padding-top: 120px;
     }
     
     /* Gallery styles for mobile */
     .gallery-preview {
-        padding: 2rem 0;
+        padding: 3rem 0 2rem;
+    }
+    .gallery-preview h2,
+    .contact-section h2 {
+        scroll-margin-top: 120px;
     }
     
     .gallery-preview h2 {
