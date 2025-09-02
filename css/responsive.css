@@ -1,5 +1,10 @@
 /* Mobile First Responsive Design */
 
+/* Section title styling for mobile */
+.section-title {
+    text-align: center;
+}
+
 /* Base styles for mobile (up to 767px) */
 @media (max-width: 767px) {
     .container {
@@ -213,7 +218,7 @@
         transform: translateY(-7px) rotate(-45deg);
     }
     main {
-        padding-top: 70px;
+        padding-top: 100px;
     }
     
     /* Gallery styles for mobile */
@@ -264,12 +269,28 @@
         padding: 1.5rem;
     }
     
-    .categories h2 {
-        font-size: 24px;
+    .categories h1 {
+        font-size: 28px;
         text-align: center;
         margin-bottom: 25px;
         color: #333;
         font-weight: 600;
+        position: relative;
+        padding-bottom: 20px;
+    }
+    
+    .categories h1::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: #B6862C;
+    }
+    .categories {
+        padding: 7rem 0;
     }
     .category-grid {
         display: grid;
@@ -291,8 +312,8 @@
         box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     }
     .category-icon {
-        width: 120px;
-        height: 120px;
+        width: 220px;
+        height: 220px;
         border-radius: 12px;
         display: flex;
         align-items: center;
@@ -301,8 +322,8 @@
         background: none;
     }
     .category-img {
-        width: 120px;
-        height: 120px;
+        width: 220px;
+        height: 220px;
         object-fit: contain;
         filter: opacity(0.8);
         transition: all 0.3s ease;
@@ -515,8 +536,8 @@
         padding: 25px 20px;
     }
     .category-img {
-        width: 70px;
-        height: 70px;
+        width: 140px;
+        height: 140px;
     }
     .footer-content {
         display: grid;
@@ -605,8 +626,8 @@
         padding: 30px 25px;
     }
     .category-img {
-        width: 80px;
-        height: 80px;
+        width: 160px;
+        height: 160px;
     }
     .footer-content {
         display: grid;
@@ -770,8 +791,8 @@
         padding: 15px;
     }
     .category-img {
-        width: 50px;
-        height: 50px;
+        width: 130px;
+        height: 130px;
     }
     .category-card h3 {
         font-size: 18px;
@@ -814,7 +835,7 @@
         padding: 15px;
     }
     .category-img {
-        width: 50px;
-        height: 50px;
+        width: 130px;
+        height: 130px;
     }
 }
