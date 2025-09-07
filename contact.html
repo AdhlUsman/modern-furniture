@@ -110,29 +110,7 @@
                     <p>Malappuram Dt., Kerala- 676 503</p>
                     <button onclick="getDirections()" class="btn btn-secondary"><i class="fas fa-directions"></i> Get Directions</button>
                 </div>
-                <script>
-                    function getDirections() {
-                        if (navigator.geolocation) {
-                            navigator.geolocation.getCurrentPosition(
-                                function(position) {
-                                    const destination = "11.0002925,75.9961696"; // Modern Furniture coordinates
-                                    const userLat = position.coords.latitude;
-                                    const userLng = position.coords.longitude;
-                                    const directionsUrl = `https://www.google.com/maps/dir/${userLat},${userLng}/${destination}`;
-                                    window.open(directionsUrl, '_blank');
-                                },
-                                function(error) {
-                                    // If user denies location access or any other error, open with just the destination
-                                    window.open("https://www.google.com/maps/dir//Modern+Furniture,+Main+Road,+Kottakkal,+Kerala+676503/@11.0002925,75.9935947,17z/", '_blank');
-                                    console.log("Error getting location:", error);
-                                }
-                            );
-                        } else {
-                            // If geolocation is not supported, open with just the destination
-                            window.open("https://www.google.com/maps/dir//Modern+Furniture,+Main+Road,+Kottakkal,+Kerala+676503/@11.0002925,75.9935947,17z/", '_blank');
-                        }
-                    }
-                </script>
+                
             </div>
         </section>
     </main>

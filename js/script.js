@@ -60,6 +60,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Expose Get Directions globally so inline onclick works
+window.getDirections = function () {
+    const destinationLat = 11.0002925;
+    const destinationLng = 75.9961696;
+    const destination = `${destinationLat},${destinationLng}`;
+    const baseUrl = 'https://www.google.com/maps/dir/?api=1';
+
+    function openMaps(url) {
+        window.open(url, '_blank');
+    }
+
+    function openWithOrigin(origin) {
+        const url = `${baseUrl}&origin=${origin}&destination=${destination}&travelmode=driving`;
+        openMaps(url);
+    }
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                const origin = `${position.coords.latitude},${position.coords.longitude}`;
+                openWithOrigin(origin);
+            },
+            function () {
+                const url = `${baseUrl}&destination=${destination}&travelmode=driving`;
+                openMaps(url);
+            },
+            { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+        );
+    } else {
+        const url = `${baseUrl}&destination=${destination}&travelmode=driving`;
+        openMaps(url);
+    }
+};
+
 // Smooth Scrolling for Navigation Links
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('a[href^="#"]');

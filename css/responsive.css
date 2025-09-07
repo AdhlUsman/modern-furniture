@@ -219,7 +219,7 @@
         transform: translateY(-7px) rotate(-45deg);
     }
     main {
-        padding-top: 120px;
+        padding-top: 140px;
     }
     
     /* Gallery styles for mobile */
@@ -227,8 +227,11 @@
         padding: 4rem 0 2rem;
     }
     .gallery-preview h2,
-    .contact-section h2 {
-        scroll-margin-top: 120px;
+    .contact-section h2,
+    .categories h1,
+    .categories .categories-section-title {
+        scroll-margin-top: 140px;
+        margin-top: 1rem;
     }
     
     .gallery-preview h2 {
