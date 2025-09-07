@@ -219,7 +219,7 @@
         transform: translateY(-7px) rotate(-45deg);
     }
     main {
-        padding-top: 140px;
+        padding-top: 160px;
     }
     
     /* Gallery styles for mobile */
@@ -230,8 +230,12 @@
     .contact-section h2,
     .categories h1,
     .categories .categories-section-title {
-        scroll-margin-top: 140px;
+        scroll-margin-top: 160px;
         margin-top: 1rem;
+        position: relative;
+        z-index: 1;
+        color: #2B2B2B !important;
+        opacity: 1 !important;
     }
     
     .gallery-preview h2 {
