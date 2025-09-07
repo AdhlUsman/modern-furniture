@@ -60,39 +60,129 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Expose Get Directions globally so inline onclick works
+// Enhanced Get Directions function for Modern Furniture store
 window.getDirections = function () {
+    // Destination: Modern Furniture (precise place coordinates)
     const destinationLat = 11.0002925;
     const destinationLng = 75.9961696;
-    const destination = `${destinationLat},${destinationLng}`;
-    const baseUrl = 'https://www.google.com/maps/dir/?api=1';
+    const destinationAddress = "Modern Furniture, Opp. Neha Hospital Main Road, KOTTAKKAL, Malappuram Dt., Kerala 676503";
 
-    function openMaps(url) {
-        window.open(url, '_blank');
+    // Open Google Maps directions using official API URL
+    function openGoogleMapsDirections(originLat = null, originLng = null) {
+        const baseUrl = 'https://www.google.com/maps/dir/?api=1';
+        const destination = `${destinationLat},${destinationLng}`;
+        const url = (originLat != null && originLng != null)
+            ? `${baseUrl}&origin=${originLat},${originLng}&destination=${destination}&travelmode=driving`
+            : `${baseUrl}&destination=${destination}&travelmode=driving`;
+        window.open(url, '_blank', 'noopener,noreferrer');
     }
 
-    function openWithOrigin(origin) {
-        const url = `${baseUrl}&origin=${origin}&destination=${destination}&travelmode=driving`;
-        openMaps(url);
+    // Geolocation error handler
+    function handleLocationError(error) {
+        let errorMessage = '';
+        switch (error && error.code) {
+            case error && error.PERMISSION_DENIED:
+                errorMessage = 'Location access denied. Opening Google Maps without your current location.';
+                break;
+            case error && error.POSITION_UNAVAILABLE:
+                errorMessage = 'Location information unavailable. Opening Google Maps without your current location.';
+                break;
+            case error && error.TIMEOUT:
+                errorMessage = 'Location request timed out. Opening Google Maps without your current location.';
+                break;
+            default:
+                errorMessage = 'An unknown error occurred. Opening Google Maps without your current location.';
+                break;
+        }
+        if (confirm(errorMessage + '\n\nClick OK to continue with directions.')) {
+            openGoogleMapsDirections();
+        }
     }
 
-    if (navigator.geolocation) {
+    // Show a temporary loading state on the button (if present)
+    const button = document.querySelector('button[onclick="getDirections()"]');
+    let originalButtonHTML;
+    if (button) {
+        originalButtonHTML = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Getting location...';
+        button.disabled = true;
+        // Safety restore after 5s
+        setTimeout(() => {
+            if (button) {
+                button.innerHTML = originalButtonHTML;
+                button.disabled = false;
+            }
+        }, 5000);
+    }
+
+    // Use geolocation when available
+    if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition(
             function (position) {
-                const origin = `${position.coords.latitude},${position.coords.longitude}`;
-                openWithOrigin(origin);
+                if (button) {
+                    button.innerHTML = originalButtonHTML;
+                    button.disabled = false;
+                }
+                const userLat = position.coords.latitude;
+                const userLng = position.coords.longitude;
+                openGoogleMapsDirections(userLat, userLng);
             },
-            function () {
-                const url = `${baseUrl}&destination=${destination}&travelmode=driving`;
-                openMaps(url);
+            function (error) {
+                if (button) {
+                    button.innerHTML = originalButtonHTML;
+                    button.disabled = false;
+                }
+                handleLocationError(error);
             },
-            { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+            { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 }
         );
     } else {
-        const url = `${baseUrl}&destination=${destination}&travelmode=driving`;
-        openMaps(url);
+        alert('Geolocation is not supported by this browser. Opening Google Maps - you can enter your location manually.');
+        openGoogleMapsDirections();
     }
 };
+
+// Alternative function for direct Google Maps link (backup)
+window.openGoogleMaps = function () {
+    const mapsUrl = 'https://www.google.com/maps/place/Modern+Furniture/@11.0002925,75.9935947,855m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3ba7b5257c016c5f:0xf6eae47b167cffa9!8m2!3d11.0002925!4d75.9961696!16s%2Fg%2F11bx5plm7v';
+    window.open(mapsUrl, '_blank', 'noopener,noreferrer');
+};
+
+// Function to copy address to clipboard
+window.copyAddress = function () {
+    const address = 'Modern Furniture, Opp. Neha Hospital Main Road, KOTTAKKAL, Malappuram Dt., Kerala - 676503';
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(address).then(function () {
+            alert('Address copied to clipboard!');
+        }, function () {
+            fallbackCopyTextToClipboard(address);
+        });
+    } else {
+        fallbackCopyTextToClipboard(address);
+    }
+};
+
+function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.top = '0';
+    textArea.style.left = '0';
+    textArea.style.position = 'fixed';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            alert('Address copied to clipboard!');
+        } else {
+            alert('Failed to copy address. Please copy manually:\n' + text);
+        }
+    } catch (err) {
+        alert('Copy not supported. Address:\n' + text);
+    }
+    document.body.removeChild(textArea);
+}
 
 // Smooth Scrolling for Navigation Links
 document.addEventListener('DOMContentLoaded', function() {
