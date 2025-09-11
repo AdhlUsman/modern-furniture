@@ -21,7 +21,7 @@
     .contact-section h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
-        margin-top: 1rem;
+        margin-top: 100px; /* push title below fixed navbar on mobile */
     }
     
     .contact-intro {
@@ -241,7 +241,7 @@
     .gallery-preview h2 {
         font-size: 24px;
         margin-bottom: 1rem;
-        margin-top: 1rem;
+        margin-top: 100px; /* push title below fixed navbar on mobile */
     }
     
     .gallery-grid {
