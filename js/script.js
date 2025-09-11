@@ -559,3 +559,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// WhatsApp enquiry for collection category cards
+document.addEventListener('DOMContentLoaded', function() {
+    // Delegate clicks from any "Enquire Now" button inside category cards
+    document.body.addEventListener('click', function(e) {
+        var btn = e.target.closest('.category-card .btn.btn-primary');
+        if (!btn) return;
+
+        // Ensure this runs only on Product page or when the button is intended for enquiry
+        var inProductPage = /Product\.html$/i.test(location.pathname) || document.querySelector('main .categories');
+        if (!inProductPage) return;
+
+        e.preventDefault();
+
+        var card = btn.closest('.category-card');
+        if (!card) return;
+
+        var titleEl = card.querySelector('h3');
+        var productName = titleEl ? titleEl.textContent.trim() : 'Product';
+
+        // Create a stable slug and assign an id to the card if missing
+        var slug = productName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        if (!card.id) card.id = slug;
+
+        // Build a link back to this product card
+        var productLink = location.origin + location.pathname + '#' + card.id;
+
+        // WhatsApp number (owner) without '+' for wa.me
+        var phone = '919847104232';
+
+        // Prefilled message
+        var message = 'Hello, I\'m interested in "' + productName + '" from your website: ' + productLink;
+        var waUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+    });
+});

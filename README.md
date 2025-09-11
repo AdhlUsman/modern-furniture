@@ -28,7 +28,7 @@ A contemporary, responsive website for a modern furniture company featuring clea
 
 ### 📞 **Call to Action**
 - Compelling section encouraging user engagement
-- Dual CTAs: Explore Collections & Contact Us
+- Dual CTAs: Explore Product & Contact Us
 - Gradient background for visual appeal
 
 ## Technical Features
@@ -70,7 +70,7 @@ modern furniture/
 │   └── script.js       # Interactive functionality
 ├── images/             # Image assets (placeholder)
 ├── about.html          # About page (to be created)
-├── collections.html    # Collections page (to be created)
+├── product.html    # Product page (to be created)
 ├── gallery.html        # Gallery page (to be created)
 └── contact.html        # Contact page (to be created)
 ```
@@ -121,7 +121,7 @@ The main color scheme uses:
 
 To complete the website, you can:
 1. Add real furniture images to replace placeholders
-2. Create the remaining pages (about, collections, gallery, contact)
+2. Create the remaining pages (about, Product, gallery, contact)
 3. Integrate with a backend for dynamic content
 4. Add a shopping cart system
 5. Implement contact form functionality
